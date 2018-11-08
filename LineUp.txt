@@ -1,0 +1,24 @@
+service mysql status / restart / start
+service apache2 restart / start / status
+
+CREATE USER 'usernameForServer'@'localhost' IDENTIFIED BY 'passwordForUser';
+GRANT ALL PRIVILEGES ON * . * TO 'usernameForServer'@'localhost';
+
+
+Add bootstrap to angular:
+1)npm install bootstrap@3 --save
+2)Add in  angular.json -> styles": [
+             		 "node_modules/bootstrap/dist/css/bootstrap.min.css",
+
+
+3)Add in style.css:@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+
+git remove from cache files ->
+gitignore remove from cache :git rm --cached name_file  
+
+
+Android studio kvm acces denied on linux ->
+sudo setfacl -m u:user:rwx /dev/kvm  -- set kvm "acces denied"
+
