@@ -2,6 +2,7 @@ Command for mysql linux
 service mysql status / restart / start
 service apache2 restart / start / status
 
+Add user to mysql database 
 CREATE USER 'usernameForServer'@'localhost' IDENTIFIED BY 'passwordForUser';
 GRANT ALL PRIVILEGES ON * . * TO 'usernameForServer'@'localhost';
 
@@ -23,3 +24,16 @@ gitignore remove from cache :git rm --cached name_file
 Android studio kvm acces denied on linux ->
 sudo setfacl -m u:user:rwx /dev/kvm  -- set kvm "acces denied"
 
+
+Angular ngModel
+ 
+	[(ngModel)] performs two-way binding for reading and writing input control values. If a [(ngModel)] directive is used, the input field takes an initial value from the bound component class and updates it back whenever any change to the input control value is detected (on keystroke and button press).
+	
+	ex:<div class="form-group">
+	  	<label for="inputEmail">Email</label>
+	  	<input type="text"
+	   	[(ngModel)] = "user.email"
+	    	id="inputEmail"
+	    	name="email"
+	    	placeholder="Email">
+	   </div>
