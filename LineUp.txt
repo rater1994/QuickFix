@@ -25,7 +25,7 @@ Android studio kvm acces denied on linux ->
 sudo setfacl -m u:user:rwx /dev/kvm  -- set kvm "acces denied"
 
 
-Angular ngModel
+Angular ngModel : [(ngModel)], ngModel = Two way binding, [ngModel] => One way binding
  
 	[(ngModel)] performs two-way binding for reading and writing input control values. If a [(ngModel)] directive is used, the input field takes an initial value from the bound component class and updates it back whenever any change to the input control value is detected (on keystroke and button press).
 	
@@ -34,6 +34,36 @@ Angular ngModel
 	  	<input type="text"
 	   	[(ngModel)] = "user.email"
 	    	id="inputEmail"
-	    	name="email"
+	    	name="email" <- !Important!
 	    	placeholder="Email">
 	   </div>
+
+
+
+	With ngModel, the value of the name attribute will become a key of the ngForm reference object signupForm that we created earlier. So, for example, signupForm.value.email will store the control value for the email id. 
+
+	ex: <div class="form-group">
+          <label for="inputEmail">Email</label>
+          <input type="text"
+            ngModel
+            id="inputEmail"
+            name="email"   <-Important!
+            placeholder="Email">
+        </div>
+
+
+	What if you need to set the initial state from the bound class component? That's what the [ngModel] does for you. 
+	ex:<div class="form-group">
+      <label for="inputEmail">Email</label>
+      <input type="text"
+        [ngModel] = "user.email"
+        id="inputEmail"
+        name="email"
+        placeholder="Email">
+	</div>
+
+
+
+Angular reload page watch memory size: 
+sudo sysctl fs.inotify.max_user_watches=524288
+sudo sysctl -p
