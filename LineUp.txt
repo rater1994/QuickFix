@@ -7,13 +7,13 @@ CREATE USER 'usernameForServer'@'localhost' IDENTIFIED BY 'passwordForUser';
 GRANT ALL PRIVILEGES ON * . * TO 'usernameForServer'@'localhost';
 
 
-Add bootstrap to angular:
+Add bootstrap to angular(local install):
 1)npm install bootstrap@3 --save
 2)Add in  angular.json -> styles": [
              		 "node_modules/bootstrap/dist/css/bootstrap.min.css",
 
 
-3)Add in style.css:@import '~bootstrap/dist/css/bootstrap.min.css';
+3)Add in style.css:   @import '~bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -67,3 +67,15 @@ Angular ngModel : [(ngModel)], ngModel = Two way binding, [ngModel] => One way b
 Angular reload page watch memory size: 
 sudo sysctl fs.inotify.max_user_watches=524288
 sudo sysctl -p
+ - If you like to make your limit permanent, use:
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
+
+
+Maven create project and add module
+-->Create project:
+	-mvn archetype:generate -DgroupId=com.websystique.multimodule -DartifactId=parent-project 
+-->Create module: cd /director project
+	-mvn archetype:generate -DgroupId=com.websystique.multimodule  -DartifactId=model-lib
+
+
