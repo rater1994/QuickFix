@@ -79,3 +79,6 @@ Maven create project and add module
 	-mvn archetype:generate -DgroupId=com.websystique.multimodule  -DartifactId=model-lib
 
 
+
+!!!-----Maven Mapping problem in version:<version>2.1.0.RELEASE</version>  !! Don't get Info mapping!! change to: 2.0.6 <---
+
