@@ -82,3 +82,21 @@ Maven create project and add module
 
 !!!-----Maven Mapping problem in version:<version>2.1.0.RELEASE</version>  !! Don't get Info mapping!! change to: 2.0.6 <---
 
+Add fontawesome angular
+npm install --save font-awesome
+add style: "../node_modules/font-awesome/css/font-awesome.css" or "node_modules/font-awesome/css/font-awesome.css"
+
+
+Dpk debian pubkey expired in 2019.01.01 --> Get last pubkey :
+	wget -qO - https://raw.githubusercontent.com/yarnpkg/releases/gh-pages/debian/pubkey.gpg | sudo apt-key add -
+
+
+Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed : 
+<dependency>
+        <groupId>javax.xml.bind</groupId>
+        <artifactId>jaxb-api</artifactId>
+        <version>2.3.0</version>
+</dependency>
+	
+
+
