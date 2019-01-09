@@ -99,4 +99,6 @@ Error creating bean with name 'entityManagerFactory' defined in class path resou
 </dependency>
 	
 
+Mapping endopoint (one of solution):
+	@ComponentScan({"controllerImpl","serviceApiImpl"})
 
