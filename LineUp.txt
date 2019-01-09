@@ -102,3 +102,7 @@ Error creating bean with name 'entityManagerFactory' defined in class path resou
 Mapping endopoint (one of solution):
 	@ComponentScan({"controllerImpl","serviceApiImpl"})
 
+
+Post method Invalid cors: 
+	Add in Headers: Origin      http://localhost:8080
+
