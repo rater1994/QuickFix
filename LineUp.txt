@@ -106,3 +106,13 @@ Mapping endopoint (one of solution):
 Post method Invalid cors: 
 	Add in Headers: Origin      http://localhost:8080
 
+
+HTTP ERROR: 404  (Nexus error!)
+Problem accessing /. Reason:
+	 Not Found
+Powered by Jetty://
+
+
+--->Solve: docker run -d -p 8081:8081 --name nexus -e CONTEXT_PATH=/ sonatype/nexus
+
+
