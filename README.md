@@ -83,3 +83,7 @@
 <b> Post method in PostMan  Invalid cors error </b>
 
 ``Add in Headers: Origin      http://localhost:8080``
+
+<b> WARN: Establishing SSL connection without server's identity verification is not recommended</b> 
+
+``URL_DATABASE?autoReconnect=true&amp;useSSL=false``
