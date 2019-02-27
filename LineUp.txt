@@ -116,3 +116,9 @@ Powered by Jetty://
 --->Solve: docker run -d -p 8081:8081 --name nexus -e CONTEXT_PATH=/ sonatype/nexus
 
 
+Postgres add user: 
+	sudo -u postgres psql 
+ create database mydb;
+ create user myuser with encrypted password 'mypass';
+ grant all privileges on database mydb to myuser;
+
