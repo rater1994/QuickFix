@@ -122,3 +122,14 @@ Postgres add user:
  create user myuser with encrypted password 'mypass';
  grant all privileges on database mydb to myuser;
 
+
+Method org.postgresql.jdbc.PgConnection.createClob() is not yet implemented.
+
+Add in application.properties : 
+	# Disable feature detection by this undocumented parameter. Check the org.hibernate.engine.jdbc.internal.JdbcServiceImpl.configure method for more details.
+	spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults = false
+
+	# Because detection is disabled you have to set correct dialect by hand.
+	spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL9Dialect
+
+
